@@ -1,0 +1,56 @@
+<!-- 
+DISLAIMER: This HTML/CSS code is commented with far greater detail then what one does in real life. Detailed comments are included to easily explain what the markup is/does such that it is easier for you to understand :D 
+* The comments are placed above the code it explains 
+-->
+<!DOCTYPE html>
+<!-- the html element is the root level of an HTML document. ALL other elements must be descendants of this elements, and be between the opening and closing tag. 
+The permittet elements are 1 head element, and 1 body element.
+
+To address accessibility concerns a lang (language) attribute is added here, that defines the language used by the majority of the content on the page for e.g. screen readers (a tool that reads the content out loud to the user). 
+ -->
+<html lang="en">
+<!-- The head section is where metadata (machine-readable information) for the page goes. 
+The metadata is NOT displayed on the page, it just contains metadata about the document. Such as charset (to allow for æ,ø,å etc), tab-title, css links, favicons etc. 
+OBS!: No HTML code for content that is visible on the webpage goes here!
+
+more info about head section: https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
+ -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <title>Nettside</title>
+    <link rel="icon" type="image/png" href="images/favicon16x16.png" sizes="16x16">
+</head>
+<!-- The body element represent the visable content of the HTML document. 
+    There can only be 1 body element.
+ -->
+
+<body>
+    <!-- A header element represents a section of content. It typically contains logos, the website name, navigational links, search forms etc. -->
+    <header>
+        <h1><a class="title" href="index.html">Gøyale dyr</a></h1>
+        <!-- the nav elements represents a section containing navigational links that takes the user to other documents -->
+        <nav>
+            <ul>
+                <li><a class="link" href="kameler.html">Kameler</a></li>
+                <li><a class="link" href="lama.html">Lama</a></li>
+                <li><a class="link" href="lemurer.html">Lemurer</a></li>
+            </ul>
+        </nav>
+    </header>
+    <p id="txt">Velkommen til mitt super duper kule nettsted! </p>
+    <p id="txt2">Her kan du lære fun facts om dyr</p>
+    <!-- responsive image grid -->
+    <div class="image_grid">
+        <img src="images/lama3.jpg" alt="super cool llama">
+        <img src="images/camel2.jpg" alt="a camel in the desert">
+    </div>
+    <!-- A footer element represents a section of content. It typically contains information about the author/organisation, copyright content, contact information etc -->
+    <footer>
+        <p>&#169 2020 - Gøyale Dyr</p>
+    </footer>
+</body>
+
+</html>

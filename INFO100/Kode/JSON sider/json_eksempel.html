@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="funcName()"> <!-- onload kaller/kjører en funksjon når siden lastes inn -->
+    <h1>JSON</h1>
+    <p id="demo"></p> <!-- jeg printer til disse taggene ved å referere til id'en med DOM i JS -->
+    <p id="demo2"></p>
+    <footer id="test"></footer>
+    <script>
+    function funcName() { // vi må si at koden skal kjøres, så den ligger i en funksjon vi kaller^
+        //lage 3 ulike JSON objekter skrevet som stringer med anførselstegn rundt ' ' 
+        var cat = '{"name":"Nils", "species":"cat", "colors":["Orange", "Brown", "White"]}'; 
+        const dog = '{"name":"Fluffy", "species":"dog", "colors":"grey"}';
+        const turtle = '{"name":"Bob", "species":"turtle", "colors":"green", "age":13}';
+        // JSON stringene må parses for å konverteres til javascript object. Vi må parse alle JSON variablene seperat, og lagre de i variabler vi kan refere til i JavaScript koden
+        const myCat = JSON.parse(cat);
+        const myDog = JSON.parse(dog);
+        const myTurtle = JSON.parse(turtle);
+        // PRINT UT VERDIER FRA NAME:VALUE PAR. refererer til et HTML element vi har laget med en gitt id, og setter verdi med .innerHTML = 
+        document.getElementById('demo').innerHTML = myCat.name + " " + myCat.species;
+        document.getElementById('demo').innerHTML += "<br>"; // print ut HTML for linjeskift
+        document.getElementById('demo').innerHTML += myCat.colors[1]; //printer verdien brown fra listen med bruk av index for å refere til en spesifik posisjon (trenger kun [i] for arrays)
+        
+        document.getElementById('demo2').innerHTML = myDog.name + "<br>" + myDog.colors; 
+        document.getElementById('test').innerHTML += "<br>" + myTurtle.name + " is a " + myTurtle.species + ", he is " + myTurtle.age + " years old"; 
+
+    }
+    </script>
+</body>
+
+</html>

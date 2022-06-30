@@ -1,0 +1,30 @@
+<!--  
+Hva er XML? XML er et format man kan lagre data i, men det gjør ingenting av seg selv. Det er ikke kode man kjører, og man er avhengig av et annet kodespråk for å hente ut dataene for å f.eks vise de på en nettside. XML er bygd opp i et slags trestruktur, og har et hierki som man lagrer data i. Det er ingen forhåndsdefinerte tags, og man bruker da selvbestemte tags for å beskrive dataen. Dette funger da ved at XML er selvforklarende kode, så man gir tags et navn man føler beskriver innholdet. Det er viktig å huske å åpne og lukke tags rett før og etter innholdet, og passe på at man ikke får nesting feil (at tagger er inne i hverandre på feil måte).  
+
+Struturen er bygd opp slik her: 
+<root>
+  <child>
+    <subchild>.....</subchild>
+  </child>
+</root> 
+
+Man har da en root tag rundt alt innholdet, og kan ta ha flere barneelemeter inne i det. Som en bookstore kan ha flere bøker som har data om seg og lignende. 
+
+Står masse nyttig info på w3: https://www.w3schools.com/xml/default.asp
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- dette er selve roten av xml treet mitt. inne i roten kan jeg ha flere elemter som forklarer noe. Her har jeg 2 ulike spørsmå inne i roten min  -->
+<questions>
+	<!-- her har jeg gitt spørsmålet mitt en attributt id="12", for å gi den en unik id. En id skal være unik og skal ikke gjentas, så kun et spørsmål kan få verdien 12 -->
+	<topic_question id="12">
+	    <question>What is 2+2?</question>
+	    <author_id>17</author_id>
+	</topic_question>
+	<topic_question>
+		<!-- Istedenfor en attributt kan jeg også lage en id med en standard tag sånn som det her. Begge deler er korrekt, er bare personlig preferanse hva man selv ønsker å bruke. -->
+		<question_id>6</question_id_id>
+	    <question>What is 55+7?</question>
+	    <author_id>17</author_id>
+	</topic_question>
+</questions>

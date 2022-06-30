@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- root  -->
+<personalia>
+    <!-- child element -->
+    <person id="3"> 
+        <firstname>Ole</firstname>
+        <lastname>Nordmann</lastname>
+        <gender>Male</gender>
+        <birthdate>02.08.1995</birthdate>
+        <age>25</age>
+        <institution>UIB</institution>
+    </person>
+    <!-- child element -->
+    <person id="5">
+        <firstname>Erna</firstname>
+        <lastname>Olsen</lastname>
+        <gender>Female</gender>
+        <birthdate>1702.01.1990</birthdate>
+        <age>30</age>
+        <institution>Stacc</institution>
+    </person>
+    <!-- child element -->
+    <person id="17">
+    	<firstname>Sofia</firstname>
+        <lastname>Andersen</lastname>
+        <gender>Female</gender>
+        <birthdate>1702.01.1992</birthdate>
+        <age>28</age>
+        <institution>DNB</institution>
+    </person>
+</personalia>

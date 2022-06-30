@@ -1,0 +1,254 @@
+/*
+
+
+All properties have been commented with a description of what styling the properties have,
+to make it easier for you to understand. The comment is below the property it describes.
+This is not needed in a regular project!
+
+You don't need to comment every single thing in your CSS, as much of it will be self-explanatory. 
+What you should comment are the things where you made a particular decision for a reason.
+
+A good tip is to add a block of comments between logical sections in your stylesheet too, 
+to help locate different sections quickly when scanning it, or even to give you something to
+search for to jump right into that part of the CSS. */
+
+/* Import style rule from google fonts. 
+Hvis man ønsker et større utvalg av fonter en standard utvalget, er google fonts er gratis alternativ.
+https://fonts.google.com/
+Man finner en font, velger select font og bruker import til å hente fonten, og skriver 
+font navnet på font-familiy i css koden
+*/
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+
+/* || General styles */
+
+
+/* stjerne gjelder alt i html dokumentet */
+* {
+    background-color: #419871;
+    /* Set a background color */
+    min-height: 100%;
+    /* Sets the minimum height of an element */
+    color: #FFFFFF;
+    /* Sets text color */
+    text-align: center;
+    /* set text alignment, her sentreres all tekst på siden */
+    max-width: 100%;
+    /* Sets the max width of an element */
+}
+
+html {
+    font-size: min(max(1rem, 4vw), 16px);
+    /* Specifies the font size of text */
+    /* dynamisk font størrelse, har min og max verdi, og endrer størrelse basert på skjerm størrlse */
+}
+
+body {
+    font-family: 'Grandstander', cursive;
+    /* set font type, importet from google fonts */
+    padding: 0 3% 0 3%;
+    margin-left: auto;
+    /* set marign left */
+    margin-right: auto;
+    /* set marign right */
+    /* centers the body sections content, margin left and right is the same */
+}
+
+h1 {
+    margin-top: 2vh;
+    /* set margin top, 2vh is dynamic unit */
+    font-family: 'Permanent Marker', cursive;
+    /* set font type, imported from google fonts */
+    font-size: min(max(2.5rem, 4vw), 70px);
+    /* set font sixe, this is a dynamic value that changes based on screen size */
+}
+
+h2 {
+    margin-top: 2vh;
+    /* set margin top, 2vh is dynamic unit */
+}
+
+h3 {
+    text-align: left;
+    /* overides earlier centering, align item to left */
+    margin-left: 2vw;
+    /* set margin left of element, 2vh is dynamic unit */
+}
+
+li {
+    margin-bottom: .5rem;
+    /* set marign on bottom of element. dynamic unit */
+}
+
+/* || Typography */
+
+a {
+    text-decoration: none;
+    /* removes decorations (underline is gone now) */
+}
+
+
+.link {
+    font-family: 'Bowlby One SC', cursive;
+    /* set font type, imported from google fonts */
+    font-size: min(max(1.5rem, 4vw), 26px);
+    /* Specifies the font size of text */
+    /* dynamisk font størrelse, har min og max verdi, og endrer størrelse basert på skjerm størrlse */
+    text-transform: uppercase;
+    /* convert all letters to uppercase */
+    letter-spacing: 1px;
+    /* set space between characters */
+}
+
+a:visited {
+    color: white;
+    /* set text color for links that have been clicked */
+}
+
+a:hover {
+    opacity: .75;
+    /* change opacity when hovering over a link */
+}
+
+#txt {
+    margin-top: 4vh;
+    /* Sets the top margin of an element */
+    color: yellow;
+    /* Set text color */
+}
+
+#txt2 {
+    color: orange;
+    /* Set text color */
+}
+
+/* || Header and Main Navigation */
+
+nav {
+    margin-top: 1vh;
+    /* set margin on top of element */
+}
+
+nav ul {
+    list-style-type: none;
+    /* Specifies the type of list-item marker. her fjerner vi bulletpoints stilen */
+    display: flex;
+    /* Specifies how a certain HTML element should be displayed */
+    justify-content: space-around;
+    /*controls alignment of all items on the main axis ( | vertikalt) */
+    align-items: center;
+    /* controls alignment of all items on the cross axis ( ---- ) */
+    flex: auto;
+    /* sizes the item based on its width/height properties */
+}
+
+nav ul li {
+    flex: auto;
+    /* sizes the item based on its width/height properties */
+}
+
+/* When using smaller screens, like a phone, the menu will adapt and turn into a column */
+@media all and (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        /* set elements to change to column instead of being a row*/
+    }
+}
+
+
+/* || Main sections */
+
+.fun_facts {
+    margin-top: 2vh;
+    /* set dynamic margin at top of element */
+    display: inline-block;
+    /* Specifies how a certain HTML element should be displayed */
+    text-align: left;
+    /* align text to left */
+}
+
+.bio_info {
+    margin-left: auto;
+    margin-right: auto;
+    /* senterer innhold */
+}
+
+img {
+    display: flex;
+    /* Specifies how a certain HTML element should be displayed */
+    margin-left: auto;
+    margin-right: auto;
+    /* senterer innhold, margin both sides of content is same */
+    margin-top: 50px;
+    /* set margin on top of element */
+    width: 100%;
+    /* set width */
+    height: auto;
+    /* height is automatically decided based on width. To keep aspect ratio on images */
+    max-width: 50vw;
+    /* images can maximum ba half the width of the screen */
+}
+
+#img_small {
+    max-height: 20vh;
+    /* Sets the max height allowed for an element 
+    20 vh is a dynamic size, that changes based on screen (view) height */
+    width: auto;
+    /* Sets the width of an element */
+}
+
+.image_grid {
+    display: flex;
+    /* Specifies how a certain HTML element should be displayed */
+    flex-direction: row;
+    /* Specifies the alignment between the items inside a flexible container */
+    justify-content: space-around;
+    /* each flex item will have evenly space on all sides of it */
+}
+
+.image_grid img {
+    max-width: 30%;
+    /* set max allowed width of image. the vw unit = view width */
+}
+
+.image_gallery {}
+
+aside {
+    width: 40%;
+    /* define the width of the element */
+    padding-left: .5rem;
+    /* set padding left of element */
+    margin-left: .5rem;
+    /* set margin left */
+    float: right;
+    /* float to the right, other elements will flow around it */
+    box-shadow: inset 5px 0 5px -5px #29627e;
+    /* set box shadow */
+    font-style: italic;
+    /* set font style, make text italic */
+    display: flex;
+    /* Specifies how a certain HTML element should be displayed */
+    flex-direction: row;
+    /* Specifies the alignment between the items inside a flexible container */
+}
+
+aside p {
+    color: #D4FAFF;
+    /* ovveride text color. gi p tagger i aside en annen farge en hvit */
+}
+
+/* || Footer */
+
+footer {
+    padding: 10px;
+    /* Some padding*/
+    left: 0;
+    /* Specifies the left position of a positioned element */
+    bottom: 0;
+    /* Specifies the bottom position of a positioned element */
+    width: 100%;
+    /* Full width */
+}

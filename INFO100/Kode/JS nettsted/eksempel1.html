@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript seminar</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- <script type="text/javascript" src="js/script.js"></script> -->
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="main-nav">
+                <li class="nav_li"><a class="logo" href="index.html">
+                        <h1>Javascript</h1>
+                    </a></li>
+                <li class="nav_li"><a class="nav_li_a" href="integer.html">Integer sortering</a></li>
+                <li class="nav_li"><a class="nav_li_a" href="string.html">String sortering</a></li>
+                <li class="nav_li"><a class="nav_li_a" href="">Eksempler<span class="arrow"></span></a>
+                    <ul class="dropdown">
+                        <li class="nav_li_ddl"><a class="nav_a_ddl" href="eksempel1.html">Eksempel strings</a></li>
+                        <li class="nav_li_ddl"><a class="nav_a_ddl" href="eksempel2.html">Eksempel integers</a></li>
+                        <li class="nav_li_ddl"><a class="nav_a_ddl" href="eksempel3.html">Diverse</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Strings - velge items/sortering</h2>
+
+        <p>Click the button</p>
+        <p>var animals = ["Esel", "Hest", "Panda", "Kamel", "Zebra"];</p>
+        <button type="button" onclick="sortStrings()" name="button">Click me</button>
+        <p id="demo"></p>
+    </main>
+    <script>
+    // funksjonen returnerer 2 spesifike items fra arraylisten, samt sorterer listen alfabetisk
+    function sortStrings() {
+        var animals = ["Esel", "Hest", "Panda", "Kamel", "Zebra"];
+        //create array list - arrays starts on 0
+        document.getElementById("demo").innerHTML = "Returnere dyr 2 & 3 fra array: " + animals[2] + " and " + animals[3];
+        //display chosen array items on page
+
+        var sorted_dyr = animals.sort();
+        //sorter dyr alfabetisk
+
+        console.log("Sorterte dyr:" + sorted_dyr);
+        //printer i web consol. sort endrer arrayen i seg selv, så man kan printe den eller den nye variablen
+        document.getElementById("demo").innerHTML = "<br> Sortert array: " + sorted_dyr;
+        // Her må man passe på litt! Bruker samme tag til å skrive ut begge resultatene, og da må man bruke += for å ikke overskrive data.
+        // Bruker man kun = til å lagre data, vil de forrige verdiene overskrives
+        //man kan putte html tags inne i string verdier man printer, og den vil oppføre seg som normal html, se fø kes <br> taggen brukt her
+    }
+    </script>
+</body>
+
+</html>

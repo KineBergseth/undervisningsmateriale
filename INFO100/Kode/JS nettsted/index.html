@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript seminar</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- <script type="text/javascript" src="js/script.js"></script> -->
+</head>
+
+<body onload="trigger()">
+    <header>
+        <nav class="navbar">
+            <ul class="main-nav">
+                <li class="nav_li"><a class="logo" href="index.html">
+                        <h1>Javascript</h1>
+                    </a></li>
+                <li class="nav_li"><a class="nav_li_a" href="integer.html">Integer sortering</a></li>
+                <li class="nav_li"><a class="nav_li_a" href="string.html">String sortering</a></li>
+                <li class="nav_li"><a class="nav_li_a" href="">Eksempler<span class="arrow"></span></a>
+                    <ul class="dropdown">
+                        <li class="nav_li_ddl"><a class="nav_a_ddl" href="eksempel1.html">Eksempel strings</a></li>
+                        <li class="nav_li_ddl"><a class="nav_a_ddl" href="eksempel2.html">Eksempel integers</a></li>
+                        <li class="nav_li_ddl"><a class="nav_a_ddl" href="eksempel3.html">Diverse</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Here is a selection of tabs with javascript examples</h2>
+        <p>Click on the bunny ;)</p>
+        <img id="bunny_img" src="images/bunny.jpg" alt="a tiny lightbrown baby bunny standing alone on the floor">
+    </main>
+    <script type="text/javascript">
+    function trigger() {
+
+        /* Lag en pop up som dukker opp når man hover over bilde */
+        document.getElementById("bunny_img").addEventListener("click", popup);
+
+        function popup() {
+
+            alert("hallaisen ;)");
+        }
+    }
+    </script>
+</body>
+
+</html>

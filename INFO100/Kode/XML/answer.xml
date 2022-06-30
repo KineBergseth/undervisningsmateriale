@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<answers>
+	<answer>
+	    <solution>42</solution>
+	    <!-- Her referer jeg til hvilken person som har svart på spørsmålet gjennom en id, 14, slik at man har en unik måte å vite hvem som hr svart på spørsmålet.  -->
+	    <respondant_id>3</respondant_id>
+	    <!-- Her referer jeg til et spørsmål jeg har lagd, som har 
+	    en tilegnet id 14.  -->
+	    <question_id>6</question_id>
+	</answer>
+	<answer>
+	    <solution>96</solution>
+	    <respondant_id>5</respondant_id>
+	    <question_id>12</question_id>
+	</answer>
+</answers>

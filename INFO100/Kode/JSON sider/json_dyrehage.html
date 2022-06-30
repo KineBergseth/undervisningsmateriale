@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+
+<body>
+    <p>JSON er gøy</p>
+    <button type="button" onclick="doStuff()" name="button">Click me</button>
+    <div id="showData"></div>
+    <script>
+    function doStuff() {
+        // JSON eksisterer kun som en string i Javascript
+        // koden er skrevet med '' rundt slik at JSON koden blir en string
+        // For å ha koden (i string format) over flere linjer har jeg brukt \ på slutten av linjen for å ikke ødelegge koden,
+        // og indikere til maskinen at jeg vil fortsette koden over flere linjer helt frem til semikolon
+        var text_passer = '{"dyrepasser":[{ "id": 0, "firstName" : "Petter", "lastName" : "Andersen", "age" : "23" },\
+										 { "id": 1, "firstName" : "Gunnar", "lastName" : "Olsen", "age" : "19" },\
+										 { "id": 2, "firstName" : "Maria", "lastName" : "Larsen", "age" : "42" }]}';
+
+
+        var text_mat = '{"mat": [{ "id" : 0, "product" : "hay", "product_type" : "plant" },\
+								{ "id" : 1, "product" : "fish", "product_type" : "animal" },\
+								{ "id" : 2, "product" : "carrots", "product_type" : "vegetable" }]}';
+
+
+        // med ` istedenfor ' på starten og slutten trenger man ikke \ for å indikere at koden fortsetter                        
+        var text_dyr = `{"dyr": [{"id" : 0, "firstName" : "Frank", "breed" : "seal", "eats_id" : "1", "dyrepasser_id" : "2" },
+								{"id" : 1, "firstName" : "Thumper", "breed" : "bunny", "eats_id" : "2", "dyrepasser_id" : "0" },
+								{"id" : 2, "firstName" : "Mark", "breed" : "horse", "eats_id" : "0", "dyrepasser_id" : "1" }]}`;
+
+        //Parse data (gjør de om til JS object)
+        obj_passer = JSON.parse(text_passer);
+        obj_mat = JSON.parse(text_mat);
+        obj_dyr = JSON.parse(text_dyr);
+
+        //variabel for å printe til tag i HTML
+        var print = document.getElementById("showData");
+
+        //printer navn og type på dyr som har index nummer 2 (ikke det samme som id, men er selve plasseringen i array)
+        print.innerHTML += obj_dyr.dyr[2].firstName + " is a " + obj_dyr.dyr[2].breed;
+        
+        //printer info om et dyr, hva de spiser + hvem som eier de
+        print.innerHTML += "<br>" + obj_dyr.dyr[1].firstName + " the " + obj_dyr.dyr[1].breed + " eats " +
+            obj_mat.mat[2].product + " and is owned by  " + obj_passer.dyrepasser[0].firstName + " " + obj_passer.dyrepasser[0].lastName;
+    }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+	// her lager vi en liste i varibelen C, og lagrer verdier av typen tall/integers
+    var c = [1, 2, 3, 4, 5];
+    document.write('Array c content: ' + c.toString() + '<br>'); //printer 1,2,3,4,5
+    document.write('Array c length (number of elements): ' + c.length + '<br>'); //printer 5, som er lengden til listen
+
+    // her lager vi en varibel sum, som vi setter til 0, den lagrer reultatet av kodeblokken inne i for løkken
+    var sum = 0;
+
+
+    // her er en for løkke, som vil loope/iterere gjennom kodeblokken
+    // syntaxen inne i for() er delt opp i 3 statements
+
+    // var i = 0 setter en variabel i til 0 før loopen starter (kjører/utføres en gang før selve kodeblokken)
+    // i < c.length definerer at vilkåret for å kjøre loopen er at variabelen i er mindre en lengden til C, som er 5 (definerer selve vilkåret/condition for å kjøre kodeblokken)
+    // ++i øker varibelen i med 1 for hver gang kodeblokken i for loopen er utført (kjører hver gang etter selve kodeblokken har blit utført), 
+    for (var i = 0; i < c.length; ++i)
+    	// her inne i kodeblokken har vi kun 1 linje med kode
+    	// for hver gang løkken utføres, vil man legge til verdien i varibelen i til variabelen sum.
+    	sum += c[i];
+    // her printer vi resultatet fra sum etter loopen er ferdig og har avsluttet
+    document.write('<br> Sum av loop: ' + sum);
+
+
+    /*
+    gjennomgang av loop: 
+    var i = 0 er vår interne teller i loopen
+    c.length er 5 ettersom listen c har 5 elementer lagret
+	++i vil øke variabeln i med 1 etter hver gang kodeblokken inne i løkken har kjørt.
+
+    iterasjon 1. 
+    her er varibelen i = 0, og den vil da finne c[i] = 0 som er verdien på plass 0 i listen c (arrays teller fra 0 istedenfor 1).
+    Den vil da finne verdien 1 som ligger på plass 0. 
+    Sum += vil så addere verdien som er funnet (1) til seg selv. 
+    Når man skriver sum = c[i]1 vil variabalen få den verdien og erstatte innhold som evt er der fra før. 
+    Når man skriver sum += c[i]/1 vil variabelen addere den verdien til verdien den allerede holder, uten å slette innholdet som var der.
+    sum+= tilsvarer egentlig sum = sum + c[i]. altså i dette tilfellet sum = 0 + 1 som blir verdien 1. 
+	++i vil øke variabelen i med 1
+
+    iterasjon 2.
+    var i = 1
+	c[i] tilsvarer c[1] som henter verdien 2 fra listen 
+    sum += c[i]; tilsvarer sum+= 2 som gir sum verdien 3 
+    her ser man effekten av += (vi har nå c[1] som henter verdien 2 fra listen. 
+    sum += 2 tilsvarer sum = sum + 2 altså, sum = 1 + 2, hvor 1 er lagret i sum fra før, og nå plusser vi på verdien 2 slik at nå er sum = 3)
+    ++i vil øke variabelen i med 1
+
+    iterasjon 3.
+    var i = 2
+	c[i] tilsvarer c[2] som henter verdien 3 fra listen 
+    sum += c[i]; tilsvarer sum+= 3 som gir sum verdien 6
+    ++i vil øke variabelen i med 1
+
+    iterasjon 4.
+	var i = 3
+	c[i] tilsvarer c[3] som henter verdien 4 fra listen 
+    sum += c[i]; tilsvarer sum+= 4 som gir sum verdien 10
+    ++i vil øke variabelen i med 1
+
+    iterasjon 5.
+    var i = 4
+	c[i] tilsvarer c[4] som henter verdien 5 fra listen 
+    sum += c[i]; tilsvarer sum+= 5 som gir sum verdien 15
+    ++i vil øke variabelen i med 1
+
+
+	Etter 5 iterasjoner vil for loopen sin vilkår ikke lenger la den kjøre siden variabelen i = 5 
+	(var i = 0; i < c.length; ++i) ser egentlig sånn her ut nå (var i = 5; 5 < 5; ++i) 
+	etter 5 iterasjoner er var i = 5, og siden 5 ikke er mindre en 5 (5<5), vil den ikke utføre kodeblokken.
+	løkken vil da stoppe.
+    */
+
+
+
+
+
+    </script>
+</body>
+
+</html>

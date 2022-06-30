@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript seminar</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- <script type="text/javascript" src="js/script.js"></script> -->
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="main-nav">
+                <li class="nav_li"><a class="logo" href="index.html">
+                        <h1>Javascript</h1>
+                    </a></li>
+                <li class="nav_li"><a class="nav_li_a" href="integer.html">Integer sortering</a></li>
+                <li class="nav_li"><a class="nav_li_a" href="string.html">String sortering</a></li>
+                <li class="nav_li"><a class="nav_li_a" href="">Eksempler<span class="arrow"></span></a>
+                    <ul class="dropdown">
+                        <li class="nav_li_ddl"><a class="nav_a_ddl" href="eksempel1.html">Eksempel strings</a></li>
+                        <li class="nav_li_ddl"><a class="nav_a_ddl" href="eksempel2.html">Eksempel integers</a></li>
+                        <li class="nav_li_ddl"><a class="nav_a_ddl" href="eksempel3.html">Diverse</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <h2 class="left">While Loop</h2>
+    <button type="button" onclick="whileFunction()" name="button">Click me</button>
+    <h2 class="left">For Loop</h2>
+    <button type="button" onclick="forFunction()" name="button">Click me</button>
+    <h2> Output: </h2>
+    <p id="demo"> </p>
+    </main>
+    <script>
+    //en enkelt while loop som printer tallene 0 til og med 99
+    function whileFunction() {
+        var text = "";
+        var i = 0;
+        //while loop starts here. while i is less than 100, add 1.
+        while (i < 100) {
+            text += "<br>The number is " + i;
+            i++;
+        }
+        document.getElementById("demo").innerHTML = text;
+    }
+
+    //en enkel for loop som printer tallene 5 til og med 9 
+    function forFunction() {
+        var text = "";
+        var i;
+        //for loop starts here.
+        for (i = 5; i < 10; i++) { text += "The number is " + i + "<br>"; } //print increment 
+        document.getElementById("demo").innerHTML = text;
+        console.log(text);
+    }
+    </script>
+</body>
+
+</html>

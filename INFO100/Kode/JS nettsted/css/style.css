@@ -1,0 +1,298 @@
+/* fonts imported from https://fonts.google.com */
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+
+/* ==========================================================================
+   UNIVERSELL HTML
+   ========================================================================== */
+
+* {
+    margin: 0;
+    /* Sets all the margin properties in one declaration */
+    padding: 0;
+    /* No padding */
+    outline: none;
+    /* Remove outline */
+}
+
+html {
+    min-height: 100%;
+    /* Sets the minimum height of an element */
+    height: 100%;
+    /* Sets the height of an element */
+    font-family: 'Poppins', sans-serif;
+    /* Specifies the font family for text */
+}
+
+body {
+    color: #3d3d3f;
+    /* Text color */
+    background-color: #F5F5F5;
+    /* Set a background color */
+    min-height: 100%;
+    /* Sets the minimum height of an element */
+}
+
+main {
+    margin: 50px;
+    /* Sets the top margin of an element */
+}
+
+h1,
+h2,
+h3 {
+    color: teal;
+    /* Text color */
+    text-align: center;
+    /* Specifies the horizontal alignment of text */
+}
+
+h2{
+    margin-bottom: 50px;
+    /* Sets the bottom margin of an element */
+}
+
+.left{
+    text-align: left;
+    /* Specifies the horizontal alignment of text */
+}
+p {
+    font-size: min(max(1rem, 4vw), 22px);
+    /* Specifies a dynamic font size */
+    text-align: center;
+    /* Specifies the horizontal alignment of text */
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    /* Specifies how a certain HTML element should be displayed */
+    justify-content: center;
+    /* Specifies the alignment between the items inside a flexible container  */
+    align-items: center;
+    /* Specifies the alignment for items inside a flexible container */
+    width: 100%;
+    /* Sets the width of an element */
+    min-height: 100px;
+    /* Sets the minimum height of an element */
+    height: auto;
+    /* Sets the height of an element */
+    box-shadow: rgba(219, 219, 219, 0.56) 0px 3px 8px 0px;
+    /* Attaches one or more drop-shadows to the box */
+    background-color: white;
+    /* Set a background color */
+}
+
+.nav_li {
+    display: inline-block;
+    /* Specifies how a certain HTML element should be displayed */
+    list-style-type: none;
+    /* Specifies the type of list-item marker */
+
+}
+
+.logo {
+    text-align: left;
+    /* Specifies the horizontal alignment of text */
+    padding: 0 100px;
+    /* Some padding */
+    display: block;
+    /* Specifies how a certain HTML element should be displayed */
+    text-decoration: none;
+    /*Specifies the decoration added to text*/
+    font-size: 200%;
+    /* Specifies the font size of text */
+    margin-right: 20%;
+    /* Sets the right margin of an element */
+}
+
+.nav_li_a {
+    color: #474544;
+    /* Text color */
+    display: block;
+    /* Specifies how a certain HTML element should be displayed */
+    padding: 0 24px;
+    /* Some padding */
+    text-decoration: none;
+    /*Specifies the decoration added to text*/
+    font-size: 125%;
+    /* Specifies the font size of text */
+
+}
+
+.nav_li:hover .nav_li_a {
+    color: teal;
+    /* Text color */
+}
+
+.arrow {
+    height: 0;
+    /* Sets the height of an element */
+    width: 0;
+    /* Sets the width of an element */
+    vertical-align: middle;
+    /* Sets the vertical alignment of an element */
+    display: inline-block;
+    /* Specifies how a certain HTML element should be displayed */
+    border-top: 4px solid #aaa;
+    /* Sets all the top border properties in one declaration */
+    border-right: 4px solid transparent;
+    /* Sets all the right border properties in one declaration */
+    border-left: 4px solid transparent;
+    /* Sets all the left border properties in one declaration */
+}
+
+.nav_li:hover .arrow {
+    border-top-color: rgb(255, 255, 255);
+    /* Sets the color of the top border */
+}
+
+.dropdown {
+    background-color: rgb(40, 44, 47);
+    /* Set a background color */
+    border-top: 0;
+    /* Sets all the top border properties in one declaration */
+    border-radius: 0 0 4px 4px;
+    /* Rounded corners */
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
+    /* Attaches one or more drop-shadows to the box */
+    display: none;
+    /* Specifies how a certain HTML element should be displayed */
+    margin: 0;
+    /* Sets all the margin properties in one declaration */
+    opacity: 0;
+    /* Sets the opacity level for an element */
+    position: absolute;
+    /* Specifies the type of positioning method used for an element */
+    width: auto;
+    /* Sets the width of an element */
+    visibility: hidden;
+    /* Specifies whether or not an element is visible */
+}
+
+.nav_li:hover .dropdown {
+    display: block;
+    /* Specifies how a certain HTML element should be displayed */
+    opacity: 1;
+    /* Sets the opacity level for an element */
+    visibility: visible;
+    /* Specifies whether or not an element is visible */
+}
+
+.nav_li_ddl {
+    display: block;
+    /* Specifies how a certain HTML element should be displayed */
+}
+
+.nav_a_ddl {
+    color: #fff;
+    /* Text color */
+    display: block;
+    /* Specifies how a certain HTML element should be displayed */
+    padding: 12px 24px;
+    /* Some padding */
+    text-decoration: none;
+    /*Specifies the decoration added to text*/
+    font-size: 125%;
+    /* Specifies the font size of text */
+}
+
+.nav_li_ddl:hover .nav_a_ddl {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Set a background color */
+}
+
+
+
+
+/* MAIN */
+
+main {
+    display: flex;
+    /* Specifies how a certain HTML element should be displayed */
+    flex-direction: column;
+    /* Specifies how flex items are placed in the flex container */
+    align-items: center;
+    /* Specifies the alignment for items inside a flexible container */
+    justify-content: center;
+    /* Specifies the alignment between the items inside a flexible container */
+    margin-top: 50px;
+    /* Sets the top margin of an element */
+    margin-bottom: 50px;
+    /* Sets the bottom margin of an element */
+}
+
+img{
+    width: 50%;
+    height: 40%;
+}
+
+
+
+/* ==========================================================================
+   FORM
+   ========================================================================== */
+
+#form {
+    padding: 25px;
+    /* Some padding */
+    width: 60%;
+    /* Sets the width of an element */
+    margin: 50px auto;
+    /* Sets all the margin properties in one declaration */
+}
+
+input[class=input],
+select,
+textarea {
+    background-color: #FFFFFF;
+    /* Set a background color */
+    box-sizing: border-box;
+    /* Tells the browser what the sizing properties (width and height) should include */
+    border: 2px solid #ccc;
+    /* Sets all the border properties in one declaration */
+    border-style: none none solid none;
+    /* Adds borders on the bottom */
+    margin-top: 6px;
+    /* Sets the top margin of an element */
+    margin-bottom: 16px;
+    /* Sets the bottom margin of an element */
+    padding: 12px;
+    /* Some padding */
+    width: 100%;
+    /* Sets the width of an element */
+    resize: vertical;
+    /* Specifies whether or not an element is re-sizable by the user */
+    font-weight: 400;
+    /* Specifies the weight of a font */
+    font-size: calc(1em + .5vw);
+    /* Specifies the font size of text */
+}
+
+textarea {
+    height: 200px;
+    /* Sets the height of an element */
+}
+
+button {
+    background: none;
+    /* Set background to none */
+    padding: 5px 10px;
+    /* Some padding */
+    border: solid 2px #2e2e2e;
+    /* Defines borders */
+    color: #2e2e2e;
+    /* Text color */
+    font-size: min(max(.5rem, 4vw), 22px);
+    /* Specifies a dynamic font size */
+}
+
+button:hover {
+    transition: all 0.25s ease-in-out;
+    /* A shorthand property for setting the four transition properties */
+    background: #2e2e2e;
+    /* Set a background */
+    color: whitesmoke;
+    /* Text color */
+}

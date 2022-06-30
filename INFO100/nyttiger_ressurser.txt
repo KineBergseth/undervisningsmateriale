@@ -1,0 +1,60 @@
+NYTTIGE RESSURSER:
+
+Software etc:
+sublime, atom, Visual Studio Code, notepad++, textedit etc.
+developer tools i nettleser. veldig viktig for js, men nyttig for html også
+
+Dokumentasjon/guides:
+generelt:
+https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web
+
+Filstier etc:
+https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files
+https://www.w3schools.com/html/html_filepaths.asp
+
+HTML:
+https://developer.mozilla.org/en-US/docs/Web/HTML
+https://www.w3schools.com/html/
+https://html.com/
+
+CSS:
+https://www.w3schools.com/css/
+https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps
+
+JS:
+https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics
+https://www.w3schools.com/js/
+
+PHP:
+https://www.w3schools.com/php/
+https://www.phptutorial.net/
+https://www.tutorialrepublic.com/php-tutorial/
+https://www.tutorialspoint.com/php/index.htm
+
+XML:
+https://www.w3schools.com/xml/
+https://www.tutorialspoint.com/xml/index.htm
+
+JSON:
+https://www.w3schools.com/js/js_json_intro.asp
+https://www.nylas.com/blog/the-complete-guide-to-working-with-json/
+https://www.tutorialspoint.com/json/json_quick_guide.htm
+
+
+SQL:
+https://www.w3schools.com/sql/
+https://www.sqltutorial.org/
+
+
+
+Validatorer/Lintere:
+Kan brukes til å finne feil i kode, og sjekke at det følger standarer
+HTML: https://validator.w3.org/#validate_by_input (kan laste opp fil eller ren kode)
+CSS: https://jigsaw.w3.org/css-validator/#validate_by_input (kan laste opp fil eller ren kode)
+PHP: https://phpcodechecker.com/
+XML: https://codebeautify.org/xmlvalidator
+JSON: https://jsonformatter.org/json-parser eller denne https://jsonlint.com/
+
+SQL: (Her kan man bygge tabeller og gjøre queries på de for å hente ut data)
+https://www.mycompiler.io/new/sql
+http://sqlfiddle.com/

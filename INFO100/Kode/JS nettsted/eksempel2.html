@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript seminar</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- <script type="text/javascript" src="js/script.js"></script> -->
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="main-nav">
+                <li class="nav_li"><a class="logo" href="index.html">
+                        <h1>Javascript</h1>
+                    </a></li>
+                <li class="nav_li"><a class="nav_li_a" href="integer.html">Integer sortering</a></li>
+                <li class="nav_li"><a class="nav_li_a" href="string.html">String sortering</a></li>
+                <li class="nav_li"><a class="nav_li_a" href="">Eksempler<span class="arrow"></span></a>
+                    <ul class="dropdown">
+                        <li class="nav_li_ddl"><a class="nav_a_ddl" href="eksempel1.html">Eksempel strings</a></li>
+                        <li class="nav_li_ddl"><a class="nav_a_ddl" href="eksempel2.html">Eksempel integers</a></li>
+                        <li class="nav_li_ddl"><a class="nav_a_ddl" href="eksempel3.html">Diverse</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Integers - litt enkel matte</h2>
+        <p>6 + 2?</p>
+        <p>33*22?</p>
+        <button type="button" onclick="myFunction(); myFunction2()" name="button">Click me</button>
+        <p id="demo"></p>
+        <p id="demo2"></p>
+
+        <script>
+        //begge funksjonene er statisk, men fastsatte verdier. 
+        //regner ut mattestykker og printer resultater i p tag på html siden
+        function myFunction() {
+            var x = 2;
+            var y = 6;
+            var z = x + y;
+            document.getElementById("demo").innerHTML = "6 + 2 = " + z;
+        }
+
+        function myFunction2() {
+            var x = 33;
+            var y = 22;
+            var z = x * y;
+            document.getElementById("demo2").innerHTML += " <br> 33*22 = " + z;
+
+        }
+        </script>
+    </main>
+</body>
+
+</html>

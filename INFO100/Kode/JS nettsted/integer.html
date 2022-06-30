@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript seminar</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- <script type="text/javascript" src="js/script.js"></script> -->
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="main-nav">
+                <li class="nav_li"><a class="logo" href="index.html">
+                        <h1>Javascript</h1>
+                    </a></li>
+                <li class="nav_li"><a class="nav_li_a" href="integer.html">Integer sortering</a></li>
+                <li class="nav_li"><a class="nav_li_a" href="string.html">String sortering</a></li>
+                <li class="nav_li"><a class="nav_li_a" href="">Eksempler<span class="arrow"></span></a>
+                    <ul class="dropdown">
+                        <li class="nav_li_ddl"><a class="nav_a_ddl" href="eksempel1.html">Eksempel strings</a></li>
+                        <li class="nav_li_ddl"><a class="nav_a_ddl" href="eksempel2.html">Eksempel integers</a></li>
+                        <li class="nav_li_ddl"><a class="nav_a_ddl" href="eksempel3.html">Diverse</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <form id="form">
+        <h2>Skriv integer input her, så gjør den noe morsomme greier med tallene wohoo</h2>
+        <p> Tallene må være separert med , (komma) eller mellomrom, helt valgfritt, enten eller funker</p>
+        <textarea id="input" name="subject" placeholder="Integer input"></textarea>
+        <button type="button" onclick="genInput()" name="button">Jeg er lat og gidder ikke skrive, lag input for meg</button>
+        <!-- Dette er en knapp som genererer input, jeg er lat og gidder ikke skrive inn noe hver gang hihi -->
+        <button type="button" onclick="doStuff()" name="button">Click me</button>
+    </form>
+    <h2> Output: </h2>
+    <p id="result"></p>
+    <script>
+    // sortere tallene stigende. merk at vanlig .sort() ikke funker på tall siden den går etter string verdier. Den anser f. eks tallet 2 til å være høyere en verdien 10.
+    //bruker da comparison sort her istedet. den sammenligner verdier, og bestemmer rekkefølge basert på om de faktisk er høyere eller lavere en hverandre
+    function doStuff() {
+        var numberlist = document.getElementById("input").value; //henter data fra textarea
+        var numbers = numberlist.trim().split(/[ ,]+/); //split verdiene fra hverandre så de blir individuelle navn ved komma eller mollomrom
+        numbers.sort((a, b) => a - b); //comparison sort for integers
+        console.log("Sorterte tall " + numbers); /* printer i web konsoll */
+
+        var output = document.getElementById("result");
+        output.innerHTML = "Sorterte tall: " + numbers; //printer på html siden i <p> tag
+
+        //printer høyeste, laveste tall og antall tall i listen
+        output.innerHTML += "<br> Høyeste tall: " + findMax(numbers) + "<br> Laveste tall: " + findMin(numbers) + "<br> Antall tall i listen: " + numbers.length; // finner antall tall på listen
+
+    }
+
+    // Defining function to find maximum value
+    function findMax(array) {
+        return Math.max.apply(null, array);
+    }
+
+    // Defining function to find minimum value
+    function findMin(array) {
+        return Math.min.apply(null, array);
+    }
+
+
+
+    // denne funksjonene genererer dummy input man kan bruke
+    function genInput() {
+        var numbers = [-100, 0, 10, 8, -3, 46, 7, 18, 1, 95, 5, 41, 17, 3];
+        var textarea = document.getElementById("input");
+        textarea.innerHTML = numbers; //her putter jeg data inn i text area
+    }
+    </script>
+</body>
+
+</html>
