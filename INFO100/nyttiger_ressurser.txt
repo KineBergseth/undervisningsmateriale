@@ -1,11 +1,11 @@
 NYTTIGE RESSURSER:
 
-Software etc:
+gratis software etc:
 sublime, atom, Visual Studio Code, notepad++, textedit etc.
 developer tools i nettleser. veldig viktig for js, men nyttig for html også
 
 Dokumentasjon/guides:
-generelt:
+generelt webutvikling:
 https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web
 
 Filstier etc:
@@ -55,6 +55,6 @@ PHP: https://phpcodechecker.com/
 XML: https://codebeautify.org/xmlvalidator
 JSON: https://jsonformatter.org/json-parser eller denne https://jsonlint.com/
 
-SQL: (Her kan man bygge tabeller og gjøre queries på de for å hente ut data)
+SQL: (Her kan man bygge tables og gjøre queries på de for å hente ut data. greit for å sjekke om det man skrivet fungerer)
 https://www.mycompiler.io/new/sql
 http://sqlfiddle.com/
